@@ -13,7 +13,7 @@ height: 100vh;
 
 .boardBox {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
     background-color: #E2E8F0;
 }
 
@@ -96,8 +96,8 @@ a {
 }
 
 .profileS {
-    width: 7rem;
-    clip-path: circle(40% at 50% 50%);
+    width: 5rem;
+    clip-path: circle(40% at 50% 50%); 
     
 }
 .profileL {
@@ -105,6 +105,7 @@ a {
     clip-path: circle(35% at 50% 50%);
     
 }
+
 
 
 .search {
@@ -134,12 +135,7 @@ input {
     display: grid;
     margin-left: 1%;
 }
-h3{
-    padding-top: 1vh;
-    font-weight: 600;
-    font-size: 2.2rem;
-    height: 7%;
-}
+
 
 #headline1{
     margin-left: 2vh;
@@ -180,13 +176,12 @@ button:hover {
     padding: 1rem;
     padding-bottom: 0;
     padding-top: 0;
-    border: 1px blue solid;
     height: 93%;
     align-content: end;
   }
 
 .projectsBox {
-    height: 90%;
+    height: 95%;
     border: 1px red solid;
     display: flex;
     flex-direction: column;
@@ -196,7 +191,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    height: 90%;
+    height: 95%;
     border: 1px red solid;
     margin-left: 5%;
  } 
@@ -212,12 +207,45 @@ button:hover {
   }
   .announcements, .trending {
     width: 80%;
-    height: 30%;
+    min-height: min-content;
     background-color: white;
     border-radius: 20px;
+    padding: 5%;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .announcements {
-    width: 90%;
-    border-bottom: 1px dotted grey;
+  .announcement {
+    width: 80%;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 0.2rem;
   }
+
+  .announcement:last-child {
+    border: none;
+  }
+
+
+
+h3{
+    padding-top: 1vh;
+    font-weight: 600;
+    font-size: 2.2rem;
+    height: 7%;
+}
+h4  {
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+p{
+     color: grey;
+     font-size: 1.5rem;
+}
+
+
+.projectsSide p {
+    font-size: 1.2rem;
+}
