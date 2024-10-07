@@ -1,6 +1,6 @@
 body  {
 display: grid;
-grid-template-columns: 1fr 5fr;
+grid-template-columns: 1fr 4fr;
 height: 100vh;
 }
 
@@ -12,4 +12,35 @@ height: 100vh;
 
 .mainContent > * {
     border: 1px blue solid;
+}
+
+.boardBox {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.boardBox > * {
+    border: 1px green solid;
+}
+
+.sidebar {
+  background-color: #0f766e;
+}
+
+.sidebar ul, .sidebar li {
+    appearance: none;
+    list-style-type: none;
+    padding: 1rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+}   
+.sidebar ul > li:first-child {
+    font-size: 2rem;
+    font-weight: 900;
+    color: black;
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }
