@@ -13,13 +13,11 @@ height: 100vh;
 
 .boardBox {
     display: grid;
-    grid-template-columns: 4fr 1fr;
-    background-color: lightgrey;
+    grid-template-columns: 3fr 1fr;
+    background-color: #E2E8F0;
 }
 
-.boardBox > * {
-    border: 1px green solid;
-}
+
 
 .sidebar {
   background-color: #03352f;
@@ -79,8 +77,15 @@ a {
     padding-right: 2rem;
 }
 
+.header2>:last-child, .header1>:last-child {
+    margin-right: 5%;
+}
 
 
+.header2 {
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.473);
+    z-index: 1;
+}
 .icons {
     width: 3rem;
 }
@@ -127,8 +132,20 @@ input {
 
 .projects {
     display: grid;
-
+    margin-left: 1%;
 }
+h3{
+    padding-top: 1vh;
+    font-weight: 600;
+    font-size: 2.2rem;
+    height: 7%;
+}
+
+#headline1{
+    margin-left: 2vh;
+}
+
+
 
 button {
     --h: 174;
@@ -142,7 +159,8 @@ button {
     font-weight: 600;
     font-size: 1.5rem;
     cursor: pointer;
-    width: 10%;
+    width: 85px;
+    flex-shrink: 0;
     height: 4rem;
     text-align: center;
 }
@@ -153,4 +171,53 @@ button:hover {
 
   button:focus { 
     --s: 55%;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 1rem; 
+    padding: 1rem;
+    padding-bottom: 0;
+    padding-top: 0;
+    border: 1px blue solid;
+    height: 93%;
+    align-content: end;
+  }
+
+.projectsBox {
+    height: 90%;
+    border: 1px red solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+ .projectsSide {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 90%;
+    border: 1px red solid;
+    margin-left: 5%;
+ } 
+  .project {
+    width: 450px;
+    aspect-ratio: 2.26 / 1;
+    background-color: white;
+    border-radius: 20px;
+  }
+
+  .announcements {
+    margin-bottom: auto;
+  }
+  .announcements, .trending {
+    width: 80%;
+    height: 30%;
+    background-color: white;
+    border-radius: 20px;
+  }
+
+  .announcements {
+    width: 90%;
+    border-bottom: 1px dotted grey;
   }
