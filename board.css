@@ -1,3 +1,4 @@
+
 body  {
 display: grid;
 grid-template-columns: 1fr 4fr;
@@ -5,14 +6,10 @@ height: 100vh;
 }
 
 .mainContent {
-    border: 1px red solid;
     display: grid;
-    grid-template-rows: 1fr 1fr 6fr ;
+    grid-template-rows: 0.5fr 0.5fr 6fr ;
 }
 
-.mainContent > * {
-    border: 1px blue solid;
-}
 
 .boardBox {
     display: grid;
@@ -25,13 +22,13 @@ height: 100vh;
 }
 
 .sidebar {
-  background-color: #0f766e;
+  background-color: #03352f;
 }
 
 .sidebar ul, .sidebar li {
     appearance: none;
     list-style-type: none;
-    padding: 0.5rem;
+    padding: 1rem;
     color: white;
     font-weight: 600;
     font-size: 2rem;
@@ -42,13 +39,13 @@ height: 100vh;
 .sidebar ul > li:first-child {
     font-size: 3rem;
     font-weight: 900;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     display: flex;
     gap: 5%;
 }
 
 .sidebar ul > li:nth-child(7) {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 a {
     text-decoration: none;
@@ -75,9 +72,85 @@ a {
 
 .header1, .header2 {
     display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+
+.icons {
+    width: 3rem;
+}
+.profileName {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+}
+
+.profileS {
+    width: 7rem;
+    clip-path: circle(40% at 50% 50%);
+    
+}
+.profileL {
+    width: 10rem;
+    clip-path: circle(35% at 50% 50%);
+    
+}
+
+
+.search {
+    margin-right: auto;
+    width: 50%;
+}
+
+input {
+    border: none;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    padding-left: 2rem;
+    width: 100%;
+}
+
+.greeting {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-right: auto;
+}
+.nickname {
+    font-weight: 900;
+    font-size: 2rem;
 }
 
 .projects {
     display: grid;
 
 }
+
+button {
+    --h: 174;
+    --s: 43%;
+    --l: 44%;
+    --a: 1;
+    background: hsl(var(--h) var(--s) var(--l) / var(--a));
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 10%;
+    height: 4rem;
+    text-align: center;
+}
+
+button:hover { 
+    --l: 52%;
+  }
+
+  button:focus { 
+    --s: 55%;
+  }
