@@ -193,7 +193,7 @@ button:hover {
     gap: 1rem;
     height: 95%;
     border: 1px red solid;
-    margin-left: 5%;
+    padding-left: 10%;
  } 
   .project {
     width: 450px;
@@ -202,33 +202,40 @@ button:hover {
     border-radius: 20px;
   }
 
-  .announcements {
-    margin-bottom: auto;
-  }
+
   .announcements, .trending {
     width: 80%;
     min-height: min-content;
     background-color: white;
     border-radius: 20px;
-    padding: 5%;
     display: flex;
-
+    padding: 5%;
+    gap: 1rem;
     flex-direction: column;
     justify-content: center;
+
+  }
+  .announcements {
+    margin-bottom: auto;
     align-items: center;
   }
 
   .announcement {
     width: 80%;
     border-bottom: 1px solid #E2E8F0;
-    padding: 0.2rem;
+    padding-bottom: 1rem;
   }
 
   .announcement:last-child {
     border: none;
   }
 
-
+.trend {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10%;
+}
 
 h3{
     padding-top: 1vh;
@@ -239,6 +246,10 @@ h3{
 h4  {
     font-weight: 600;
     font-size: 1.7rem;
+}
+h5{
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 p{
      color: grey;
