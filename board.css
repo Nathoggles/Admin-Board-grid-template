@@ -18,7 +18,6 @@ height: 100vh;
 }
 
 
-
 .sidebar {
   background-color: #03352f;
 }
@@ -131,10 +130,6 @@ input {
     font-size: 2rem;
 }
 
-.projects {
-    display: grid;
-    margin-left: 1%;
-}
 
 
 #headline1{
@@ -178,6 +173,7 @@ button:hover {
     padding-top: 0;
     height: 93%;
     align-content: end;
+    margin-left: 1%;
   }
 
 .projectsBox {
@@ -196,10 +192,17 @@ button:hover {
     padding-left: 10%;
  } 
   .project {
-    width: 450px;
-    aspect-ratio: 2.26 / 1;
+    /* width: clamp(10px, 500px, 800px); */
+  /*   min-width: (800px, 10vw);
+    max-width: (100px, 5vw); */
+ /*    min-width: 100px;
+    max-width: 500px;
+    width: min(500px, 90%); */
+    aspect-ratio: 2.25 / 1;
     background-color: white;
     border-radius: 20px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.473);
+    z-index: 1;
   }
 
 
