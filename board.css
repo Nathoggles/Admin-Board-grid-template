@@ -3,6 +3,7 @@ body  {
 display: grid;
 grid-template-columns: 1fr 4fr;
 height: 100vh;
+--base-size: clamp(1rem, 1rem + 1vw, 3.2rem);
 }
 
 .mainContent {
@@ -29,14 +30,14 @@ height: 100vh;
     padding: 1rem;
     color: white;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: calc(var(--base-size));
 }   
 
 
 .sidebar ul > li:first-child {
-    font-size: 3rem;
+    font-size: calc(var(--base-size) * 1.7);
     font-weight: 900;
-    margin-bottom: 4rem;
+    margin-bottom: calc(var(--base-size) * 2);
     display: flex;
     gap: 5%;
 }
@@ -52,43 +53,16 @@ a {
 }
 
 
-
-/* #community {
-    width: 25vh;
-    border: 1px solid white;
-} */
-
-
 #dashboard {
-    width: 5rem;
+    width: calc(var(--base-size) * 2.2);
 }
 
 .sideIcons {
-    width: 3rem;
+    width: calc(var(--base-size));
     fill: white;
 }
 
-@media screen and (max-width: 768px) {
-    .sidebar ul, .sidebar li {
-        font-size: 1.2rem;
-        flex-direction: column;
-        padding: 1%;
-        margin-left: 2%;
-    }
-    .sidebar ul > li:first-child {
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
-    margin-left: -5%;
-    }
-    .sideIcons {
-        width: 1.5rem;
-    }
-    a {
-        display: flex;
-        flex-direction: column;
-        gap: 1%;
-    }
-}
+
 
 .header1, .header2 {
     display: flex;
@@ -109,7 +83,7 @@ a {
     z-index: 1;
 }
 .icons {
-    width: 3rem;
+    width: calc(var(--base-size));
 }
 .profileName {
     font-size: 2rem;
@@ -129,7 +103,6 @@ a {
 }
 
 
-
 .search {
     margin-right: auto;
     width: 50%;
@@ -141,16 +114,19 @@ input {
     background-color: #f7f7f7;
     padding-left: 2rem;
     width: 100%;
+    font-size: calc(var(--base-size) * 0.8);
 }
+
+
 
 .greeting {
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: calc(var(--base-size) * 0.7);
     margin-right: auto;
 }
 .nickname {
     font-weight: 900;
-    font-size: 2rem;
+    font-size: calc(var(--base-size) * 1.2);
 }
 
 
@@ -263,23 +239,43 @@ button:hover {
     gap: 10%;
 }
 
+.trendIcon {
+    width: calc(var(--base-size) * 2);
+}
+@media screen and (max-width: 768px) {
+    .sidebar ul, .sidebar li {
+      
+        flex-direction: column;
+    }
+
+    a {
+        display: flex;
+        flex-direction: column;
+    }
+    .trend {
+        flex-direction: column
+
+    }
+}
+
+
 h3{
     padding-top: 1vh;
     font-weight: 600;
-    font-size: 2.2rem;
+    font-size: calc(var(--base-size) * 0.9);
     height: 7%;
 }
 h4  {
     font-weight: 600;
-    font-size: 1.7rem;
+    font-size: calc(var(--base-size) * 0.8);
 }
 h5{
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: calc(var(--base-size));
 }
 p{
      color: grey;
-     font-size: 1.5rem;
+     font-size: calc(var(--base-size) * 0.75);
 }
 
 
